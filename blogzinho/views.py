@@ -4,6 +4,7 @@ from django.urls import path
 # Create your views here.
 
 def meu_blog(request):
-    return HttpResponse('mensagem da url <blog>!!!!!!')
+    return render(request, 'blogzinho.html')
+
 def teste_foda(request):
     return HttpResponse('testei aqui essa porraaaaaaaaaaaaaaaaaaa')
