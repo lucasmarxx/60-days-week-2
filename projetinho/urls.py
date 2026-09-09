@@ -20,14 +20,15 @@ from django.urls import path
 from django.http import HttpResponse
 
 # http request <-> http response
+
 def minha_home(request):
     return HttpResponse('home!')
 
-def minha_view(request):
-    return HttpResponse('mensagem teste')
+def meu_blog(request):
+    return HttpResponse('mensagem da url <blog>!')
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('blog/', minha_view),
+    path('blog/', meu_blog),
     path('', minha_home)
 ]
